@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width" , initial-scale=1>
+<title> </title>
+<script>
+    function abc()
+    {
+        alert("Successfully registered");
+    }
+</script>
+</head>
+<style>
+
+Body{
+background-image: url(download.jpg);
+text-align: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+
+Fieldset
+{
+Display: inline-block;
+Border: 1px black;
+Width: 600px;
+}
+
+Legend{
+Background-color: lavenderblush;
+color: purple;
+Text-align: center;
+Font-size: 40px;
+}
+
+div.elem-group{
+margin: 20px 0;
+}
+
+div.elem-group.inlined{
+width: 95%;
+display: inline-block;
+float:none;
+}
+
+Label{
+Display: block;
+font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+Padding-bottom: 11px;
+Font-size: 1.25em;
+}
+
+Input,select,textarea{
+Border-radius: 3px;
+Border: 3px solid #777;
+Box-sizing: border-box;
+Font-size: 1.25em;
+Font-family: “monospace”;
+Width: 100%;
+Padding: 10px;
+}
+
+div.elem-group.inlined input{
+width: 95%;
+display: inline-block;
+}
+
+Textarea{
+Height: 250px;
+}
+
+button{
+    font-size: 30px;
+    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+    background-color: aliceblue;
+    color: darkolivegreen;
+}
+
+</style>
+<body>
+<br>
+<form action="reservation.php" method="post">
+<fieldset>
+<legend>RESERVATION</legend>
+
+<div class="elem-group">
+<label for="name">Name</label>
+<input type="text" id="name" name="visit_name" placeholder="enter your Name" pattern=[A-Z\sa-z]{3,20} required>
+</div>
+<hr>
+<div class="elem-group">
+<label for="email">E-Mail</label>
+<input type="email" id="email" name="visit_email" placeholder="enter your Email" required>
+</div>
+<hr>
+<div class="elem-group">
+<label for="mobile">Mobile number</label>
+<input type="tel" id="phone" name="visit_phone" placeholder="enter your Mobile number" pattern=(+91\d{10})required>
+</div>
+<hr>
+<div class="elem-group inlined">
+<label for="adult">Adult</label>
+<input type="number" id="adult" name="total_adults" Placeholder="no.of.adults" min=1 required>
+</div>
+<hr>
+<div class="elem-group inlined">
+<label for="child">Children</label>
+<input type="number" id="child" name="total_children" Placeholder="no.of.Children"  required>
+</div>
+<hr>
+<div class="elem-group inlined">
+<label for="checkin-date">Check-in Date</label>
+<input type="date" id="checkin-date" name="checkin" required>
+</div>
+<hr>
+<div class="elem-group inlined">
+<label for="checkout-date">Check-out Date</label>
+<input type="date" id="checkout-date" name="checkout" required>
+</div>
+<hr>
+<div class="elem-group inlined">
+<label for="room-selection">Select Room Preference</label>
+<select id="room-selection" name="room_preference" required>
+<option value="">Choose a Room from the List</option>
+<option value="single">single bed</option>
+<option value="double">double bed</option>
+<option value="2single">2 single bed</option>
+<option value="2double">2 double bed</option>
+<option value="3single">3 single bed</option>
+<option value="3double">3 double bed</option>
+</select>
+</div>
+<hr>
+<div class="elem-group inlined">
+<label for="message">Anything Else?</label>
+<textarea id="message" name="visit_message" placeholder="Comment" Required></textarea>
+</div>
+<hr>
+<div class="elem-group inlined">
+<center>
+<button type="submit" onclick="abc()">Confirm</button>
+</center>
+</div>
+
+</fieldset>
+</form>
+</body>
+</html>
